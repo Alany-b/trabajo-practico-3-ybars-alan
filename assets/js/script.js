@@ -21,9 +21,9 @@ try {
 const verDetalles = async (id) => {
   try {
     const response = await fetch(`${urlDragonBall}/${id}`);
-    // const response2 = await fetch(
-    //   `https://dragonball-api.com/api/characters/${id}`
-    // );
+     const response2 = await fetch(
+       `https://dragonball-api.com/api/characters/${id}`
+     );
 
     if (!response.ok) {
       throw new error("Error en la API");
@@ -37,8 +37,7 @@ const verDetalles = async (id) => {
   }
 };
 
-
-// para dragon ball
+// para dragon ballAdd commentMore actions
 btnBuscar.addEventListener("click", async () => {
   const data = await cargarDatos(urlDragonBall);
   const dataPersonajes = data.items;
@@ -74,3 +73,4 @@ contenedorPadre.addEventListener("click", (e) => {
   }
 });
 
+  
